@@ -9,11 +9,13 @@ function MainContent() {
       <div className='bg-white  ms-2 rounded-md' style={{ width: '96%' }}>
         <Sub1 />
 
-        <div className='p-7'>
+        <div className='p-7 mb-10'>
           <Sub2 />
         </div>
 
       </div>
+
+      
 
     </>
   )

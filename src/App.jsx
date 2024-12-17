@@ -1,5 +1,6 @@
 import React from 'react'
 import MainDash from './components/MainDash'
+import Footer from './pages/Footer'
 
 
 function App() {
@@ -7,6 +8,10 @@ function App() {
   <>
 
   <MainDash />
+
+  <div className='mb-5'>
+    <Footer />
+    </div>
 
 
   

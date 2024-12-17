@@ -20,7 +20,7 @@ function Header() {
 
   return (
     <>
-      <div className="w-full md:w-1/5 pt-8 pb-8">
+      <div className="w-full md:w-1/5 pt-8 pb-8 mt-2">
         <div className="bg-white mx-8 rounded-lg">
           
           <div className="flex items-center justify-between">
@@ -102,7 +102,7 @@ function Header() {
           )}
 
           
-          <div className="hidden md:block">
+          <div className="hidden md:block ">
             <button className="flex items-center mt-5 ms-3">
               <img
                 width={50}
@@ -149,7 +149,7 @@ function Header() {
             </div>
 
             <img
-              className="mt-6 w-full rounded-md"
+              className="mt-48 m w-full rounded-md"
               src="https://thumbs.dreamstime.com/b/not-listening-to-teacher-isolated-cartoon-vector-illustration-kid-lays-head-desk-children-having-fun-last-row-annoyed-262139485.jpg"  
             />
           </div>
