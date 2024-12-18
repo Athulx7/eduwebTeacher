@@ -18,6 +18,8 @@ function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
+
+
   return (
     <>
       <div className="w-full md:w-1/5 pt-8 pb-8 mt-2">
@@ -73,12 +75,14 @@ function Header() {
                   ADD NEW
                 </button>
 
-                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center"
+                >
                   <FontAwesomeIcon icon={faReadme} className="me-3" />
                   All Notes
                 </button>
 
-                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center"
+               >
                   <FontAwesomeIcon icon={faFolderOpen} className="me-3" />
                   Important Notes
                 </button>

@@ -11,9 +11,6 @@ function NewTask() {
   return (
     <>
 
-    
-
-
 <div className="w-full   ">
   
   <div className="flex items-center md:justify-start ">
@@ -48,6 +45,7 @@ function NewTask() {
   
   <div className="mt-6 md:mt-8">
     <MainContent />
+
     
   </div>
 </div>
