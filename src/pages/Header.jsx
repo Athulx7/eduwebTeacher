@@ -14,9 +14,12 @@ import {
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons/faChevronDown";
 import { faReadme } from "@fortawesome/free-brands-svg-icons";
 
-function Header() {
+function Header({activeView, setActiveView }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const toggleMenu = () => setMenuOpen(!menuOpen);
+
+  const getButtonStyle = (view) =>
+    activeView === view ? "text-black" : "text-gray-500";
 
 
 
@@ -75,29 +78,28 @@ function Header() {
                   ADD NEW
                 </button>
 
-                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center"
+                <button className={`text-lg text-gray-700 hover:text-black w-full flex items-center ${getButtonStyle("NewTask")}`}
+                onClick={() => setActiveView("NewTask")}
                 >
                   <FontAwesomeIcon icon={faReadme} className="me-3" />
                   All Notes
                 </button>
 
-                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center"
-               >
-                  <FontAwesomeIcon icon={faFolderOpen} className="me-3" />
-                  Important Notes
-                </button>
+             
 
-                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+                <button className="text-lg text-gray-500 hover:text-black w-full flex items-center"
+                 onClick={() => setActiveView("AllTask")}>
                   <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
                   All Tasks
                 </button>
 
-                <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+                <button className="text-lg text-gray-500 hover:text-black w-full flex items-center"
+                onClick={() => setActiveView("AllStudent")}>
                   <FontAwesomeIcon icon={faUsers} className="me-3" />
-                  All Students
+                  All Members
                 </button>
 
-                <button className="text-lg text-gray-700 hover:text-red-700 w-full flex items-center">
+                <button className="text-lg text-gray-500 hover:text-red-700 w-full flex items-center">
                   <FontAwesomeIcon icon={faArrowRightFromBracket} className="me-3" />
                   Log Out
                 </button>
@@ -106,7 +108,7 @@ function Header() {
           )}
 
           
-          <div className="hidden md:block ">
+          <div className="hidden md:block mt-10">
             <button className="flex items-center mt-5 ms-3">
               <img
                 width={50}
@@ -120,40 +122,41 @@ function Header() {
               </button>
             </button>
 
-            <div className="mt-6 space-y-4 ms-3 me-3">
+            <div className="mt-8 space-y-4 ms-3 me-3">
               <button className="bg-gray-800 text-white px-10 py-2 rounded-md font-bold hover:bg-black w-full">
                 <FontAwesomeIcon icon={faPlus} className="me-3" />
                 ADD NEW
               </button>
 
-              <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+              
+
+              <button className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("NewTask")}`}
+              onClick={() => setActiveView("NewTask")}>
                 <FontAwesomeIcon icon={faReadme} className="me-3" />
                 All Notes
               </button>
 
-              <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
-                <FontAwesomeIcon icon={faFolderOpen} className="me-3" />
-                Important Notes
-              </button>
 
-              <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+              <button className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("AllTask")}`}
+              onClick={() => setActiveView("AllTask")}>
                 <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
                 All Tasks
               </button>
 
-              <button className="text-lg text-gray-700 hover:text-black w-full flex items-center">
+              <button className={`text-lg hover:text-black w-full flex items-center ${getButtonStyle("AllStudent")}`}
+              onClick={() => setActiveView("AllStudent")}>
                 <FontAwesomeIcon icon={faUserTie} className="me-3" />
-                All Students
+                All Members
               </button>
 
-              <button className="text-lg text-gray-700 hover:text-red-700 w-full flex items-center">
+              <button className="text-lg text-gray-500 hover:text-red-700 w-full flex items-center">
                 <FontAwesomeIcon icon={faArrowRightFromBracket} className="me-3" />
                 Log Out
               </button>
             </div>
 
             <img
-              className="mt-48 m w-full rounded-md"
+              className="mt-52 m w-full rounded-md"
               src="https://thumbs.dreamstime.com/b/not-listening-to-teacher-isolated-cartoon-vector-illustration-kid-lays-head-desk-children-having-fun-last-row-annoyed-262139485.jpg"  
             />
           </div>
