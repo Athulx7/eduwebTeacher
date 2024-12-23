@@ -15,49 +15,43 @@ function AllTaskSub1() {
             <div className="w-2/5 flex justify-center">ACTION</div>
           </div>
 
-          <div
-            className="overflow-y-scroll h-[670px] no-scrollbar" // Custom utility class
-          >
-           
-              
-                <div className="flex items-center bg-white text-black font-medium h-24 py-3 px-4 text-center">
-                  <Link
-                    to={"/subTask2"}
-                    className="w-2/5 flex justify-center hover:text-gray-600"
-                  >
-                    <span>
-                      <FontAwesomeIcon icon={faCaretRight} className="me-2" />
-                    </span>
-                    Example Title 
-                  </Link>
-                  <div className="w-2/5 flex justify-center">
-                    Dec 20, 2024
-                  </div>
-                  <div className="w-2/5 flex justify-center">
-                    <Link
-                      to={"/subTask2"}
-                      className="w-10 py-1 rounded-lg bg-green-600 transition-transform duration-500 hover:scale-105"
-                    >
-                      <FontAwesomeIcon
-                        icon={faPen}
-                        className="text-lg text-white "
-                      />
-                    </Link>
+          <div className="overflow-y-scroll h-[670px] no-scrollbar">
+            <div className="flex items-center bg-white text-black font-medium h-24 py-3 px-4 text-center">
+              <Link
+                to={"/subTask2"}
+                className="w-2/5 flex justify-center hover:text-gray-600"
+              >
+                <span>
+                  <FontAwesomeIcon icon={faCaretRight} className="me-2" />
+                </span>
+                Example Title
+              </Link>
+              <div className="w-2/5 flex justify-center">Dec 20, 2024</div>
+              <div className="w-2/5 flex justify-center">
+                <Link
+                  to={"/subTask2"}
+                  className="w-10 py-1 rounded-lg bg-green-600 transition-transform duration-500 hover:scale-105"
+                >
+                  <FontAwesomeIcon
+                    icon={faPen}
+                    className="text-lg text-white "
+                  />
+                </Link>
 
-                    <button className="w-10 py-1 rounded-lg bg-red-600 ms-10 transition-transform duration-500 hover:scale-105">
-                      <FontAwesomeIcon
-                        icon={faTrashCan}
-                        className=" text-xl text-white"
-                      />
-                    </button>
-                  </div>
-                </div>
-                <hr className="border-t border-gray-400" />
-              
-          
+                <button className="w-10 py-1 rounded-lg bg-red-600 ms-10 transition-transform duration-500 hover:scale-105">
+                  <FontAwesomeIcon
+                    icon={faTrashCan}
+                    className=" text-xl text-white"
+                  />
+                </button>
+              </div>
+            </div>
+            <hr className="border-t border-gray-400" />
           </div>
         </div>
       </div>
+
+
 
       {/* Tailwind CSS Custom Styles */}
       <style>

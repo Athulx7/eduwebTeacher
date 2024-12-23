@@ -79,31 +79,29 @@ function Header({activeView, setActiveView }) {
                   ADD NEW
                 </button>
 
-                <button className={`text-lg text-gray-700 hover:text-black w-full flex items-center ${getButtonStyle("NewTask")}`}
-                onClick={() => setActiveView("NewTask")}
-                >
-                 <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
-                  All Notes
-                </button>
+                <button className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("NewTask")}`}
+              onClick={() => setActiveView("NewTask")}>
+               <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
+                All Notes
+              </button>
 
-             
 
-                <button className="text-lg text-gray-500 hover:text-black w-full flex items-center"
-                 onClick={() => setActiveView("AllTask")}>
-                  <FontAwesomeIcon icon={faListCheck} className="me-3" />
-                  All Tasks
-                </button>
+              <Link to={'/allTasks11'} className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("AllTask")}`}
+              onClick={() => setActiveView("AllTask")}>
+                <FontAwesomeIcon icon={faListCheck} className="me-3" />
+                All Tasks
+              </Link>
 
-                <button className="text-lg text-gray-500 hover:text-black w-full flex items-center"
-                onClick={() => setActiveView("AllStudent")}>
-                  <FontAwesomeIcon icon={faUsers} className="me-3" />
-                  All Members
-                </button>
+              <button className={`text-lg hover:text-black w-full flex items-center ${getButtonStyle("AllStudent")}`}
+              onClick={() => setActiveView("AllStudent")}>
+                <FontAwesomeIcon icon={faUserTie} className="me-3" />
+                All Members
+              </button>
 
-                <button className="text-lg text-gray-500 hover:text-red-700 w-full flex items-center">
-                  <FontAwesomeIcon icon={faArrowRightFromBracket} className="me-3" />
-                  Log Out
-                </button>
+              <button className="text-lg text-gray-500 hover:text-red-700 w-full flex items-center">
+                <FontAwesomeIcon icon={faArrowRightFromBracket} className="me-3" />
+                Log Out
+              </button>
               </div>
             </div>
           )}
