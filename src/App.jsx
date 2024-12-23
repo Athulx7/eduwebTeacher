@@ -1,22 +1,18 @@
-import React from 'react'
-import MainDash from './components/MainDash'
-import Footer from './pages/Footer'
-
+import React from "react";
+import MainDash from "./components/MainDash";
+import Footer from "./pages/Footer";
 
 function App() {
   return (
-  <>
+    <>
+    
+      <MainDash />
 
-  <MainDash />
-
-  <div className='mb-5'>
-    <Footer />
-    </div>
-
-
-  
-  </>
-  )
+      <div className="mb-5">
+        <Footer />
+      </div>
+    </>
+  );
 }
 
-export default App
+export default App;

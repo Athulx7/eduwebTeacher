@@ -6,6 +6,7 @@ import {
   faArrowRightFromBracket,
   faBars,
   faFolderOpen,
+  faListCheck,
   faNoteSticky,
   faPlus,
   faUsers,
@@ -81,7 +82,7 @@ function Header({activeView, setActiveView }) {
                 <button className={`text-lg text-gray-700 hover:text-black w-full flex items-center ${getButtonStyle("NewTask")}`}
                 onClick={() => setActiveView("NewTask")}
                 >
-                  <FontAwesomeIcon icon={faReadme} className="me-3" />
+                 <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
                   All Notes
                 </button>
 
@@ -89,7 +90,7 @@ function Header({activeView, setActiveView }) {
 
                 <button className="text-lg text-gray-500 hover:text-black w-full flex items-center"
                  onClick={() => setActiveView("AllTask")}>
-                  <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
+                  <FontAwesomeIcon icon={faListCheck} className="me-3" />
                   All Tasks
                 </button>
 
@@ -132,16 +133,16 @@ function Header({activeView, setActiveView }) {
 
               <button className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("NewTask")}`}
               onClick={() => setActiveView("NewTask")}>
-                <FontAwesomeIcon icon={faReadme} className="me-3" />
+               <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
                 All Notes
               </button>
 
 
-              <button className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("AllTask")}`}
+              <Link to={'/allTasks11'} className={`text-lg hover:text-black  w-full flex items-center ${getButtonStyle("AllTask")}`}
               onClick={() => setActiveView("AllTask")}>
-                <FontAwesomeIcon icon={faNoteSticky} className="me-3" />
+                <FontAwesomeIcon icon={faListCheck} className="me-3" />
                 All Tasks
-              </button>
+              </Link>
 
               <button className={`text-lg hover:text-black w-full flex items-center ${getButtonStyle("AllStudent")}`}
               onClick={() => setActiveView("AllStudent")}>

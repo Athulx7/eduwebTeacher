@@ -7,6 +7,8 @@ import {
   import React from "react";
 import PowerOffHeader from "../../pages/PowerOffHeader";
 import AllTaskSub1 from "./Alltask/AllTaskSub1";
+import { Route, Routes } from "react-router-dom";
+import SubTask2 from "./Alltask/SubTask2";
   
 function AllTask() {
   return (
@@ -29,8 +31,12 @@ function AllTask() {
 
   
   <div className="mt-6 md:mt-8">
-   
-     <AllTaskSub1 />
+    
+    <Routes >
+      <Route path="/allTasks11" element={<AllTaskSub1 />} />
+      <Route path="/subTask2" element={<SubTask2 />} />
+    </Routes>
+     
     
   </div>
 </div>
