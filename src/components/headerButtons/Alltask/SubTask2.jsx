@@ -34,7 +34,7 @@ function SubTask2() {
             <div className="w-2/5 flex justify-center">ACTION</div>
           </div>
 
-          <div>
+          <div className="overflow-y-scroll h-[634px] no-scrollbar">
             <div className="flex items-center bg-white text-black font-medium h-24 py-3 px-4 text-center">
               <button
                 to={""}
@@ -86,6 +86,18 @@ function SubTask2() {
           </div>
         </div>
       )}
+
+<style>
+        {`
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .no-scrollbar {
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none; /* Firefox */
+          }
+        `}
+      </style>
     </>
   );
 }

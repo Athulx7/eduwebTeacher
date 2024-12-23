@@ -11,11 +11,11 @@ function StudentSub1() {
               <div className="flex-1 text-center">EMAIL</div>
             </div>
 
-            <div>
+            <div className="overflow-y-scroll h-[640px] no-scrollbar">
               <div className="flex flex-col md:flex-row items-center bg-white text-black font-medium py-4 px-4 text-center">
-                <button className="flex-1 text-center hover:text-gray-600">
+                <div className="flex-1 text-center">
                   MEMBER NAME
-                </button>
+                </div>
                 <div className="flex-1 text-center">
                   athulnsjnjhiuwbeb@gmail.com
                 </div>
@@ -26,6 +26,18 @@ function StudentSub1() {
           </div>
         </div>
       </div>
+
+      <style>
+        {`
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .no-scrollbar {
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none; /* Firefox */
+          }
+        `}
+      </style>
     </>
   );
 }
