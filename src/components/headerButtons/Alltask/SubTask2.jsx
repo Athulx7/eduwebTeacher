@@ -75,7 +75,7 @@ function SubTask2() {
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
               adipisci, voluptatibus commodi tempore vitae molestiae incidunt
               maxime nihil hic libero facere culpa, et, pariatur excepturi ullam
-              voluptate voluptatum aliquam maiores!
+              voluptate vovluptatum aliquam maiores!
             </p>
             <button
               onClick={toggleModal}
