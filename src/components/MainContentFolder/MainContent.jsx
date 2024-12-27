@@ -9,7 +9,7 @@ function MainContent() {
      
       
   
-        <div className="bg-white ms-2 rounded-md" style={{ width: "96%" }}>
+        <div className="bg-white ms-2 rounded-md" style={{ width: "96%" }} >
         <Sub1 setActiveTab={setActiveTab} activeTab={activeTab} />
 
         <div className="p-7 mb-10">

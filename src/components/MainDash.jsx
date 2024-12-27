@@ -8,7 +8,6 @@ function MainDash() {
   const [activeView, setActiveView] = useState("NewTask");
   return (
     <>
-
       <div className="flex flex-col md:flex-row">
         <Header activeView={activeView} setActiveView={setActiveView} />
         <div className="w-full md:w-4/5">
@@ -19,7 +18,6 @@ function MainDash() {
         {activeView === "AllStudent" && <AllStudent />}
         </div>
       </div>
-
     </>
   )
 }

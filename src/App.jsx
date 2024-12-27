@@ -5,7 +5,6 @@ import Footer from "./pages/Footer";
 function App() {
   return (
     <>
-    
       <MainDash />
 
       <div className="mb-5">

@@ -13,18 +13,19 @@ function AllNotes() {
   const threeDotButton = () => SetDotmenu(!DotMenu);
   return (
     <>
-      <div className="container mx-auto p-4 -mt-10 ">
+      <div className="container mx-auto p-4 -mt-10 overflow-y-scroll h-[640px] no-scrollbar">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="relative w-62 p-4 border-b-4 border-b-blue-400 rounded-md hover:bg-blue-400 hover:text-white mt-5 hover:shadow-lg transition-all duration-300 ease-in-out">
-            <div className="flex">
-              <FontAwesomeIcon icon={faBookOpen} className="text-2xl" />
-              <button
-                className="ms-auto"
-                onClick={(e) => {
+          <div onClick={(e) => {
                   e.preventDefault();
                   e.stopPropagation();
                   threeDotButton();
                 }}
+                 className="relative w-62 p-4 border-b-4 border-b-blue-400 rounded-md hover:bg-blue-400 hover:text-white mt-5 hover:shadow-lg transition-all duration-300 ease-in-out">
+            <div className="flex">
+              <FontAwesomeIcon icon={faBookOpen} className="text-2xl" />
+              <button
+                className="ms-auto"
+                
               >
                 <FontAwesomeIcon icon={faEllipsis} />
               </button>
@@ -32,7 +33,7 @@ function AllNotes() {
 
             {DotMenu && <ThreeDot noteType = 'all' />}
 
-            <div className="mt-4">
+            <div className="mt-4 ">
               <h2 className="text-xl font-medium">Note Name</h2>
             </div>
             <div>
@@ -118,6 +119,18 @@ function AllNotes() {
           </Link>
         </div>
       </div>
+
+      <style>
+        {`
+          .no-scrollbar::-webkit-scrollbar {
+            display: none;
+          }
+          .no-scrollbar {
+            -ms-overflow-style: none; /* Internet Explorer 10+ */
+            scrollbar-width: none; /* Firefox */
+          }
+        `}
+      </style>
     </>
   );
 }
